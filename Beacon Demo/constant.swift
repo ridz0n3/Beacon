@@ -14,3 +14,23 @@ let virtual_uuid = NSUUID(UUIDString: "8492E75F-4FD6-469D-B132-043FE94921D8")
 class constant: NSObject {
 
 }
+/*
+- (NSString *)textForProximity:(CLProximity)proximity
+{
+    switch (proximity) {
+    case CLProximityFar:
+        return @"Far";
+        break;
+    case CLProximityNear:
+        return @"Near";
+        break;
+    case CLProximityImmediate:
+        return @"Immediate";
+        break;
+        
+    default:
+        return @"Unknown";
+        break;
+    }
+}*/
+

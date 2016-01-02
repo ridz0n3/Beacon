@@ -1,25 +1,22 @@
 //
-//  BaggageCollectionViewController.swift
+//  BaggageGateViewController.swift
 //  Beacon Demo
 //
-//  Created by ME-Tech Mac User 1 on 12/26/15.
-//  Copyright © 2015 Me-tech. All rights reserved.
+//  Created by ME-Tech Mac User 1 on 1/2/16.
+//  Copyright © 2016 Me-tech. All rights reserved.
 //
 
 import UIKit
 
-class BaggageCollectionViewController: UIViewController {
+class BaggageGateViewController: UIViewController {
 
-    var major = 2820
-    var minor = 40462
-    var identifier = "Baggage Gate"
+    var major = 17407
+    var minor = 28559
+    var identifier = "Upsell"
     
-    @IBOutlet weak var navigateBtn: UIButton!
     @IBOutlet weak var closeBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        navigateBtn.layer.cornerRadius = 10
         closeBtn.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
@@ -29,18 +26,18 @@ class BaggageCollectionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func navigateBtnPressed(sender: AnyObject) {
-        let baggageNavigateVC = self.storyboard?.instantiateViewControllerWithIdentifier("BaggageMapVC") as! BaggageMapViewController
-        self.presentViewController(baggageNavigateVC, animated: true, completion: nil)
-    }
-
     @IBAction func closeBtnPressed(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        var views = self.presentingViewController
+        
+        while ((views?.presentingViewController) != nil){
+            views = views?.presentingViewController
+        }
+        
+        views?.dismissViewControllerAnimated(true, completion: nil)
         
         let parameter: [String:AnyObject] = ["major" : major, "minor" : minor, "identifier" : identifier]
         NSNotificationCenter.defaultCenter().postNotificationName("reloadRegion", object: nil, userInfo: parameter)
     }
-    
     /*
     // MARK: - Navigation
 

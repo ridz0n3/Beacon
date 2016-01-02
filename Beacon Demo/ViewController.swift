@@ -8,22 +8,24 @@
 
 import UIKit
 
-class ViewController: UIViewController, ESTBeaconManagerDelegate, CBPeripheralManagerDelegate {
-    @IBOutlet weak var time: UILabel!
+class ViewController: UIViewController, ESTBeaconManagerDelegate {
+    
     @IBOutlet weak var minute: UILabel!
     @IBOutlet weak var boardingTime: UILabel!
     @IBOutlet weak var proceedBtn: UIButton!
+    @IBOutlet weak var closeBtn: UIButton!
 
     var beaconManager = ESTBeaconManager()
     var region = CLBeaconRegion()
-    //Define class variable in your VC/AppDelegate
-    var bluetoothPeripheralManager: CBPeripheralManager?
     
     let date1 = "2015-12-23 9:12:00 a.m."
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        closeBtn.layer.cornerRadius = 10;
         proceedBtn.layer.cornerRadius = 10;
+        
         let logo = UIImage(named: "header")
         let imageView = UIImageView(image:logo)
         self.navigationItem.titleView = imageView
@@ -52,10 +54,6 @@ class ViewController: UIViewController, ESTBeaconManagerDelegate, CBPeripheralMa
         
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("countdown"), userInfo: nil, repeats: true)
         
-        //On viewDidLoad/didFinishLaunchingWithOptions
-        let options = [CBCentralManagerOptionShowPowerAlertKey:0] //<-this is the magic bit!
-        bluetoothPeripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: options)
-        
         beaconManager = ESTBeaconManager()
         beaconManager.delegate = self
         beaconManager.requestAlwaysAuthorization()
@@ -63,7 +61,7 @@ class ViewController: UIViewController, ESTBeaconManagerDelegate, CBPeripheralMa
         region = CLBeaconRegion(proximityUUID: estimote_uuid!, major: 17407, minor: 28559, identifier: "monitor")
 
         //beaconManager.startRangingBeaconsInRegion(region)
-        beaconManager.startMonitoringForRegion(region)
+        //beaconManager.startMonitoringForRegion(region)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -91,7 +89,7 @@ class ViewController: UIViewController, ESTBeaconManagerDelegate, CBPeripheralMa
         
         let countdown = "\(diffDateComponents.month) m: \(diffDateComponents.day) d: \(diffDateComponents.hour) h: \(diffDateComponents.minute) min"
         
-        time.text = countdown
+        //time.text = countdown
         minute.text = "\(diffDateComponents.minute)"
 
     }
@@ -120,32 +118,20 @@ class ViewController: UIViewController, ESTBeaconManagerDelegate, CBPeripheralMa
     func beaconManager(manager: AnyObject, rangingBeaconsDidFailForRegion region: CLBeaconRegion?, withError error: NSError) {
         print(error.localizedDescription)
     }
-    
-    //MARK: bluetooth delegate
-    func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager) {
+
+    @IBAction func closeBtnPressed(sender: AnyObject) {
         
-        if peripheral.state == CBPeripheralManagerState.PoweredOff {
-            
-            // create the alert
-            let alert = UIAlertController(title: "Turn On Bluetooth to Allow to Connect Accessories", message: "", preferredStyle: UIAlertControllerStyle.Alert)
-            // add the actions (buttons)
-            alert.addAction(UIAlertAction(title: "Setting", style: UIAlertActionStyle.Default, handler: { action in
-                // do something like...
-                UIApplication.sharedApplication().openURL(NSURL(string:"prefs:root=Bluetooth")!)
-                
-            }))
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            
-            // show the alert
-            self.presentViewController(alert, animated: true, completion: nil)
-            
-        }
+        
+        let parameter: [String:AnyObject] = ["major" : 24330, "minor" : 2117, "identifier" : "check in counter"]
+        NSNotificationCenter.defaultCenter().postNotificationName("reloadRegion", object: nil, userInfo: parameter)
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     @IBAction func proceedBtnPressed(sender: AnyObject) {
         
         let homeVC = self.storyboard?.instantiateViewControllerWithIdentifier("CheckInMapVC") as! CheckInMapViewController
-        self.navigationController?.pushViewController(homeVC, animated: true)
+        self.presentViewController(homeVC, animated: true, completion: nil)
         
     }
 }

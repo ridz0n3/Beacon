@@ -13,6 +13,13 @@ class CheckInViewController: UIViewController {
     @IBOutlet var alertView: UIView!
     @IBOutlet weak var navigateBtn: UIButton!
     @IBOutlet weak var checkInBtn: UIButton!
+    @IBOutlet weak var closeBtn: UIButton!
+    
+    //purple
+    var major = 2820
+    var minor = 40462
+    var identifier = "gate"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         checkInBtn.layer.cornerRadius = 10;
@@ -35,8 +42,10 @@ class CheckInViewController: UIViewController {
         alertView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)
         alertView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.25)
         navigateBtn.layer.cornerRadius = 10;
+        closeBtn.layer.cornerRadius = 10;
+        
         let applicationLoadViewIn = CATransition()
-        applicationLoadViewIn.type = kCATransitionFade
+        applicationLoadViewIn.type = kCATransitionFromTop
         applicationLoadViewIn.duration = 2.0
         applicationLoadViewIn.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         alertView.layer.addAnimation(applicationLoadViewIn, forKey: kCATransitionReveal)
@@ -45,13 +54,24 @@ class CheckInViewController: UIViewController {
     }
 
     @IBAction func closeAlertView(sender: AnyObject) {
-        self.alertView.hidden = true
+        
+        var views = self.presentingViewController
+        
+        while ((views?.presentingViewController) != nil){
+            views = views?.presentingViewController
+        }
+        
+        views?.dismissViewControllerAnimated(true, completion: nil)
+        
+        let parameter: [String:AnyObject] = ["major" : major, "minor" : minor, "identifier" : identifier]
+        NSNotificationCenter.defaultCenter().postNotificationName("reloadRegion", object: nil, userInfo: parameter)
+        
     }
     
     @IBAction func navigateBtnPressed(sender: AnyObject) {
-        let gateNavigateVC = self.storyboard?.instantiateViewControllerWithIdentifier("GateNavigateVC")
+        let gateNavigateVC = self.storyboard?.instantiateViewControllerWithIdentifier("BoardingGateMapVC") as! BoardingMapViewController
         
-        self.navigationController?.pushViewController(gateNavigateVC!, animated: true)
+        self.presentViewController(gateNavigateVC, animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

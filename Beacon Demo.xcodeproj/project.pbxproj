@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E10BB8A1C37854100F12AF3 /* BoardingMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E10BB891C37854100F12AF3 /* BoardingMapViewController.swift */; };
+		7E10BB8C1C37867400F12AF3 /* BaggageMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E10BB8B1C37867400F12AF3 /* BaggageMapViewController.swift */; };
+		7E10BB8E1C37A16F00F12AF3 /* BoardingGateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E10BB8D1C37A16F00F12AF3 /* BoardingGateViewController.swift */; };
+		7E10BB901C37C11000F12AF3 /* BaggageGateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E10BB8F1C37C11000F12AF3 /* BaggageGateViewController.swift */; };
 		7E658FDA1C182A2A0046210D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E658FD91C182A2A0046210D /* AppDelegate.swift */; };
 		7E658FDC1C182A2A0046210D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E658FDB1C182A2A0046210D /* ViewController.swift */; };
 		7E658FDF1C182A2A0046210D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E658FDD1C182A2A0046210D /* Main.storyboard */; };
@@ -16,8 +20,6 @@
 		7E658FFA1C182A2B0046210D /* Beacon_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E658FF91C182A2B0046210D /* Beacon_DemoUITests.swift */; };
 		7E8F5C0D1C1BC59C00F67E98 /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F5C0C1C1BC59C00F67E98 /* constant.swift */; };
 		7E8F5C101C1BC6C200F67E98 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F5C0F1C1BC6C200F67E98 /* NetworkManager.swift */; };
-		7E99B85D1C2A44F800239322 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E99B85B1C2A44F800239322 /* GreetingViewController.swift */; };
-		7E99B85E1C2A44F800239322 /* GreetingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E99B85C1C2A44F800239322 /* GreetingViewController.xib */; };
 		7EA4F9571C2E320000D0E251 /* GateGreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA4F9561C2E320000D0E251 /* GateGreetingViewController.swift */; };
 		7EA4F95A1C2E397400D0E251 /* BaggageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA4F9591C2E397400D0E251 /* BaggageCollectionViewController.swift */; };
 		7EB07B021C29206C0061D1C9 /* CheckInMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB07B011C29206C0061D1C9 /* CheckInMapViewController.swift */; };
@@ -47,6 +49,10 @@
 
 /* Begin PBXFileReference section */
 		7C08EAE94F6CCD2C32CD263A /* Pods_Beacon_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beacon_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E10BB891C37854100F12AF3 /* BoardingMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardingMapViewController.swift; sourceTree = "<group>"; };
+		7E10BB8B1C37867400F12AF3 /* BaggageMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaggageMapViewController.swift; sourceTree = "<group>"; };
+		7E10BB8D1C37A16F00F12AF3 /* BoardingGateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardingGateViewController.swift; sourceTree = "<group>"; };
+		7E10BB8F1C37C11000F12AF3 /* BaggageGateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaggageGateViewController.swift; sourceTree = "<group>"; };
 		7E658FD61C182A2A0046210D /* Beacon Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beacon Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E658FD91C182A2A0046210D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E658FDB1C182A2A0046210D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,8 +69,6 @@
 		7E6590071C1831680046210D /* BridgeObjC-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BridgeObjC-Header.h"; sourceTree = "<group>"; };
 		7E8F5C0C1C1BC59C00F67E98 /* constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
 		7E8F5C0F1C1BC6C200F67E98 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		7E99B85B1C2A44F800239322 /* GreetingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
-		7E99B85C1C2A44F800239322 /* GreetingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GreetingViewController.xib; sourceTree = "<group>"; };
 		7EA4F9561C2E320000D0E251 /* GateGreetingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GateGreetingViewController.swift; sourceTree = "<group>"; };
 		7EA4F9591C2E397400D0E251 /* BaggageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaggageCollectionViewController.swift; sourceTree = "<group>"; };
 		7EB07B011C29206C0061D1C9 /* CheckInMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInMapViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7E10BB881C37851800F12AF3 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				7EB07B011C29206C0061D1C9 /* CheckInMapViewController.swift */,
+				7E10BB891C37854100F12AF3 /* BoardingMapViewController.swift */,
+				7E10BB8B1C37867400F12AF3 /* BaggageMapViewController.swift */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
 		7E658FCD1C182A290046210D = {
 			isa = PBXGroup;
 			children = (
@@ -146,9 +160,9 @@
 		7E658FD81C182A2A0046210D /* Beacon Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7E10BB881C37851800F12AF3 /* Map */,
 				7EA4F9581C2E393400D0E251 /* Baggage */,
 				7EA4F9551C2E31C800D0E251 /* Gate */,
-				7E99B85A1C2A44A800239322 /* Greeting */,
 				7EB07B061C294D050061D1C9 /* Check in */,
 				7EB07B031C2934750061D1C9 /* Home */,
 				7E8F5C0E1C1BC66800F67E98 /* Network Call */,
@@ -160,7 +174,6 @@
 				7E658FE51C182A2A0046210D /* Info.plist */,
 				7E6590071C1831680046210D /* BridgeObjC-Header.h */,
 				7E8F5C0C1C1BC59C00F67E98 /* constant.swift */,
-				7EB07B011C29206C0061D1C9 /* CheckInMapViewController.swift */,
 			);
 			path = "Beacon Demo";
 			sourceTree = "<group>";
@@ -191,19 +204,12 @@
 			name = "Network Call";
 			sourceTree = "<group>";
 		};
-		7E99B85A1C2A44A800239322 /* Greeting */ = {
-			isa = PBXGroup;
-			children = (
-				7E99B85B1C2A44F800239322 /* GreetingViewController.swift */,
-				7E99B85C1C2A44F800239322 /* GreetingViewController.xib */,
-			);
-			name = Greeting;
-			sourceTree = "<group>";
-		};
 		7EA4F9551C2E31C800D0E251 /* Gate */ = {
 			isa = PBXGroup;
 			children = (
 				7EA4F9561C2E320000D0E251 /* GateGreetingViewController.swift */,
+				7E10BB8D1C37A16F00F12AF3 /* BoardingGateViewController.swift */,
+				7E10BB8F1C37C11000F12AF3 /* BaggageGateViewController.swift */,
 			);
 			name = Gate;
 			sourceTree = "<group>";
@@ -342,7 +348,6 @@
 			files = (
 				7E658FE41C182A2A0046210D /* LaunchScreen.storyboard in Resources */,
 				7EB07B0C1C294DF30061D1C9 /* CheckInAlertView.xib in Resources */,
-				7E99B85E1C2A44F800239322 /* GreetingViewController.xib in Resources */,
 				7E658FE11C182A2A0046210D /* Assets.xcassets in Resources */,
 				7E658FDF1C182A2A0046210D /* Main.storyboard in Resources */,
 			);
@@ -418,12 +423,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EB07B021C29206C0061D1C9 /* CheckInMapViewController.swift in Sources */,
+				7E10BB8A1C37854100F12AF3 /* BoardingMapViewController.swift in Sources */,
 				7E8F5C101C1BC6C200F67E98 /* NetworkManager.swift in Sources */,
 				7E658FDC1C182A2A0046210D /* ViewController.swift in Sources */,
+				7E10BB8C1C37867400F12AF3 /* BaggageMapViewController.swift in Sources */,
 				7EA4F95A1C2E397400D0E251 /* BaggageCollectionViewController.swift in Sources */,
-				7E99B85D1C2A44F800239322 /* GreetingViewController.swift in Sources */,
+				7E10BB8E1C37A16F00F12AF3 /* BoardingGateViewController.swift in Sources */,
 				7E8F5C0D1C1BC59C00F67E98 /* constant.swift in Sources */,
 				7E658FDA1C182A2A0046210D /* AppDelegate.swift in Sources */,
+				7E10BB901C37C11000F12AF3 /* BaggageGateViewController.swift in Sources */,
 				7EB07B051C2934B30061D1C9 /* HomeViewController.swift in Sources */,
 				7EA4F9571C2E320000D0E251 /* GateGreetingViewController.swift in Sources */,
 				7EB07B081C294D240061D1C9 /* CheckInViewController.swift in Sources */,

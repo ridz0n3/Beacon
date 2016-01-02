@@ -10,12 +10,15 @@ import UIKit
 
 class GateGreetingViewController: UIViewController {
 
+    //green
+    var major = 24330
+    var minor = 2117
+    var identifier = "Baggage Claim"
+    
+    @IBOutlet weak var closeBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let logo = UIImage(named: "header")
-        let imageView = UIImageView(image:logo)
-        self.navigationItem.titleView = imageView
+        closeBtn.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +27,18 @@ class GateGreetingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func closeBtnPressed(sender: AnyObject) {
+        var views = self.presentingViewController
+        
+        while ((views?.presentingViewController) != nil){
+            views = views?.presentingViewController
+        }
+        
+        views?.dismissViewControllerAnimated(true, completion: nil)
+        
+        let parameter: [String:AnyObject] = ["major" : major, "minor" : minor, "identifier" : identifier]
+        NSNotificationCenter.defaultCenter().postNotificationName("reloadRegion", object: nil, userInfo: parameter)
+    }
 
     /*
     // MARK: - Navigation
