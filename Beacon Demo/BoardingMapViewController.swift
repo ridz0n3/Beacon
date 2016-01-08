@@ -42,7 +42,7 @@ class BoardingMapViewController: UIViewController , ESTBeaconManagerDelegate {
         if beacons.count != 0{
             
             if beacons[0].accuracy < 2 && beacons[0].accuracy > 0{
-                let checkInVC = self.storyboard?.instantiateViewControllerWithIdentifier("BoardingGateVC") as! GateGreetingViewController
+                let checkInVC = self.storyboard?.instantiateViewControllerWithIdentifier("BoardingGateVC") as! BoardingGateViewController
                 self.presentViewController(checkInVC, animated: true, completion: nil)
                 beaconManager.stopRangingBeaconsInRegion(region)
                 

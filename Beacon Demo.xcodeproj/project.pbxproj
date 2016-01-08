@@ -18,10 +18,13 @@
 		7E658FE41C182A2A0046210D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E658FE21C182A2A0046210D /* LaunchScreen.storyboard */; };
 		7E658FEF1C182A2B0046210D /* Beacon_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E658FEE1C182A2B0046210D /* Beacon_DemoTests.swift */; };
 		7E658FFA1C182A2B0046210D /* Beacon_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E658FF91C182A2B0046210D /* Beacon_DemoUITests.swift */; };
+		7E8BF8CD1C3F5D0800384842 /* SectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E8BF8CC1C3F5D0800384842 /* SectionView.xib */; };
 		7E8F5C0D1C1BC59C00F67E98 /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F5C0C1C1BC59C00F67E98 /* constant.swift */; };
 		7E8F5C101C1BC6C200F67E98 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F5C0F1C1BC6C200F67E98 /* NetworkManager.swift */; };
+		7E9A53851C3BB1C8001094F5 /* CustomUpsellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A53841C3BB1C8001094F5 /* CustomUpsellTableViewCell.swift */; };
 		7EA4F9571C2E320000D0E251 /* GateGreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA4F9561C2E320000D0E251 /* GateGreetingViewController.swift */; };
 		7EA4F95A1C2E397400D0E251 /* BaggageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA4F9591C2E397400D0E251 /* BaggageCollectionViewController.swift */; };
+		7EAE82461C38B2C0003C724C /* UpsellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAE82451C38B2C0003C724C /* UpsellViewController.swift */; };
 		7EB07B021C29206C0061D1C9 /* CheckInMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB07B011C29206C0061D1C9 /* CheckInMapViewController.swift */; };
 		7EB07B051C2934B30061D1C9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB07B041C2934B30061D1C9 /* HomeViewController.swift */; };
 		7EB07B081C294D240061D1C9 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB07B071C294D240061D1C9 /* CheckInViewController.swift */; };
@@ -67,10 +70,13 @@
 		7E658FF91C182A2B0046210D /* Beacon_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon_DemoUITests.swift; sourceTree = "<group>"; };
 		7E658FFB1C182A2B0046210D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E6590071C1831680046210D /* BridgeObjC-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BridgeObjC-Header.h"; sourceTree = "<group>"; };
+		7E8BF8CC1C3F5D0800384842 /* SectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionView.xib; sourceTree = "<group>"; };
 		7E8F5C0C1C1BC59C00F67E98 /* constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
 		7E8F5C0F1C1BC6C200F67E98 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7E9A53841C3BB1C8001094F5 /* CustomUpsellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUpsellTableViewCell.swift; sourceTree = "<group>"; };
 		7EA4F9561C2E320000D0E251 /* GateGreetingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GateGreetingViewController.swift; sourceTree = "<group>"; };
 		7EA4F9591C2E397400D0E251 /* BaggageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaggageCollectionViewController.swift; sourceTree = "<group>"; };
+		7EAE82451C38B2C0003C724C /* UpsellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpsellViewController.swift; sourceTree = "<group>"; };
 		7EB07B011C29206C0061D1C9 /* CheckInMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInMapViewController.swift; sourceTree = "<group>"; };
 		7EB07B041C2934B30061D1C9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7EB07B071C294D240061D1C9 /* CheckInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 		7E658FD81C182A2A0046210D /* Beacon Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7EAE82441C38B2A5003C724C /* Upsell */,
 				7E10BB881C37851800F12AF3 /* Map */,
 				7EA4F9581C2E393400D0E251 /* Baggage */,
 				7EA4F9551C2E31C800D0E251 /* Gate */,
@@ -220,6 +227,16 @@
 				7EA4F9591C2E397400D0E251 /* BaggageCollectionViewController.swift */,
 			);
 			name = Baggage;
+			sourceTree = "<group>";
+		};
+		7EAE82441C38B2A5003C724C /* Upsell */ = {
+			isa = PBXGroup;
+			children = (
+				7EAE82451C38B2C0003C724C /* UpsellViewController.swift */,
+				7E9A53841C3BB1C8001094F5 /* CustomUpsellTableViewCell.swift */,
+				7E8BF8CC1C3F5D0800384842 /* SectionView.xib */,
+			);
+			name = Upsell;
 			sourceTree = "<group>";
 		};
 		7EB07B031C2934750061D1C9 /* Home */ = {
@@ -347,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E658FE41C182A2A0046210D /* LaunchScreen.storyboard in Resources */,
+				7E8BF8CD1C3F5D0800384842 /* SectionView.xib in Resources */,
 				7EB07B0C1C294DF30061D1C9 /* CheckInAlertView.xib in Resources */,
 				7E658FE11C182A2A0046210D /* Assets.xcassets in Resources */,
 				7E658FDF1C182A2A0046210D /* Main.storyboard in Resources */,
@@ -429,9 +447,11 @@
 				7E10BB8C1C37867400F12AF3 /* BaggageMapViewController.swift in Sources */,
 				7EA4F95A1C2E397400D0E251 /* BaggageCollectionViewController.swift in Sources */,
 				7E10BB8E1C37A16F00F12AF3 /* BoardingGateViewController.swift in Sources */,
+				7EAE82461C38B2C0003C724C /* UpsellViewController.swift in Sources */,
 				7E8F5C0D1C1BC59C00F67E98 /* constant.swift in Sources */,
 				7E658FDA1C182A2A0046210D /* AppDelegate.swift in Sources */,
 				7E10BB901C37C11000F12AF3 /* BaggageGateViewController.swift in Sources */,
+				7E9A53851C3BB1C8001094F5 /* CustomUpsellTableViewCell.swift in Sources */,
 				7EB07B051C2934B30061D1C9 /* HomeViewController.swift in Sources */,
 				7EA4F9571C2E320000D0E251 /* GateGreetingViewController.swift in Sources */,
 				7EB07B081C294D240061D1C9 /* CheckInViewController.swift in Sources */,

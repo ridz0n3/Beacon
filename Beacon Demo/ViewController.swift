@@ -90,7 +90,7 @@ class ViewController: UIViewController, ESTBeaconManagerDelegate {
         let countdown = "\(diffDateComponents.month) m: \(diffDateComponents.day) d: \(diffDateComponents.hour) h: \(diffDateComponents.minute) min"
         
         //time.text = countdown
-        minute.text = "\(diffDateComponents.minute)"
+        minute.text = "10"//"\(diffDateComponents.minute)"
 
     }
     

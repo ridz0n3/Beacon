@@ -90,7 +90,14 @@ class HomeViewController: UIViewController, ESTBeaconManagerDelegate, CBPeripher
                 
                 if beacons[0].major == 17407{
                     
-                    if region.identifier == "Upsell"{
+                    if region.identifier == "Boarding Gate"{
+                        let checkInVC = self.storyboard?.instantiateViewControllerWithIdentifier("GateVC") as! GateGreetingViewController
+                        self.navigationController?.presentViewController(checkInVC, animated: true, completion: nil)
+                        beaconManager.stopRangingBeaconsInRegion(region)
+                    }else if region.identifier == "Upsell"{
+                        let checkInVC = self.storyboard?.instantiateViewControllerWithIdentifier("UpsellVC") as! UpsellViewController
+                        self.navigationController?.presentViewController(checkInVC, animated: true, completion: nil)
+                        beaconManager.stopRangingBeaconsInRegion(region)
                     }else{
                         let checkInVC = self.storyboard?.instantiateViewControllerWithIdentifier("boardingVC") as! ViewController
                         self.navigationController?.presentViewController(checkInVC, animated: true, completion: nil)
@@ -111,11 +118,7 @@ class HomeViewController: UIViewController, ESTBeaconManagerDelegate, CBPeripher
                     
                 }else if beacons[0].major == 2820{
                     
-                    if region.identifier == "Boarding Gate"{
-                        let checkInVC = self.storyboard?.instantiateViewControllerWithIdentifier("GateVC") as! GateGreetingViewController
-                        self.navigationController?.presentViewController(checkInVC, animated: true, completion: nil)
-                        beaconManager.stopRangingBeaconsInRegion(region)
-                    }else if region.identifier == "Baggage Gate"{
+                    if region.identifier == "Baggage Gate"{
                         let checkInVC = self.storyboard?.instantiateViewControllerWithIdentifier("BaggageGateVC") as! BaggageGateViewController
                         self.presentViewController(checkInVC, animated: true, completion: nil)
                         beaconManager.stopRangingBeaconsInRegion(region)

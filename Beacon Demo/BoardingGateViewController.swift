@@ -11,8 +11,8 @@ import UIKit
 class BoardingGateViewController: UIViewController {
 
     //green
-    var major = 2820
-    var minor = 40462
+    var major = 17407
+    var minor = 28559
     var identifier = "Boarding Gate"
     
     @IBOutlet weak var closeBtn: UIButton!
