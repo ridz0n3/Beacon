@@ -20,7 +20,7 @@ class UpsellViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        product = ["2820" : ["taxi","taxi","taxi"], "24330" : ["grocery","grocery","grocery","grocery"]]
+        product = ["24330" : ["taxi","taxi","taxi"], "2820" : ["grocery","grocery","grocery","grocery"]]
         
         upsellTableView.backgroundColor = UIColor.lightGrayColor()
         beaconManager = ESTBeaconManager()
